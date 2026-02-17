@@ -1,0 +1,54 @@
+{
+  "name": "@jantimon/react-render-loop-tracer",
+  "version": "1.0.0",
+  "description": "Trace useEffect → setState render loops in React/Next.js apps during hydration",
+  "license": "MIT",
+  "author": "Jan Nicklas",
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./babel-plugin": "./src/babel-plugin.js",
+    "./runtime": "./src/runtime.js"
+  },
+  "scripts": {
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "babel-loader": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__traverse": "^7.28.0",
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^28.1.0",
+    "oxfmt": "^0.33.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3",
+    "vite-plugin-babel": "^1.5.1",
+    "vitest": "^4.0.18"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
+}
